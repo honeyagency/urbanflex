@@ -1,0 +1,30 @@
+<footer class="section--footer bg--black flex flex--wrap justify--around spacing--gutter spacing--vert-2">
+	
+	<div class="grid--one grid--sm-three-fifths flex flex--wrap justify--between font--tiny color--gray order--dsk-2">
+		<div class="grid--three-fifths grid--sm-two-fifths margin--bot-2">
+			<strong class="font--thunder margin--bot-1 block letter--1 text--uppercase">{{home.hours.title}}</strong>
+			{% for hours in home.hours.hours %}
+				<div class="flex flex--wrap justify--between">
+					<span>{{hours.title}}</span>
+					<span>{{hours.open|date('g a')}} - {{hours.close|date('g a')}}</span>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="grid--one grid--sm-half margin--bot-2">
+			<strong class="font--thunder margin--bot-1 block  letter--1 text--uppercase ">{{home.contact.title}}</strong>
+			{{home.contact.address}} {{home.contact.city}}, {{home.contact.state}} {{home.contact.zip}}<br>
+			{{home.contact.phone}}<br>
+			<a href="mailto:{{home.contact.email}}">{{home.contact.email}}</a>
+		</div>
+	</div>
+	<div class="grid--one grid--sm-fourth flex flex--wrap justify--around order--dsk-1">
+		<div class="grid--two-thirds">
+			<i class="icon-hustle" data-grunticon-embed></i>
+		</div>
+		<div class="block--social flex flex--wrap justify--between flex--column grid--fifth grid--sm-third">
+			{% if home.social.facebook %}<a class="grid--one" href="{{home.social.facebook.url}}" target="{{home.social.facebook.target}}" title="{{home.social.facebook.title}}"><i class="icon-social--facebook" data-grunticon-embed></i></a>{% endif %}
+			{% if home.social.instagram %}<a class="grid--one" href="{{home.social.instagram.url}}" target="{{home.social.instagram.target}}" title="{{home.social.instagram.title}}"><i class="icon-social--instagram" data-grunticon-embed></i></a>{% endif %}
+			{% if home.social.youtube %}<a class="grid--one" href="{{home.social.youtube.url}}" target="{{home.social.youtube.target}}" title="{{home.social.youtube.title}}"><i class="icon-social--youtube" data-grunticon-embed></i></a>{% endif %}
+		</div>
+	</div>
+</footer>

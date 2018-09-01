@@ -1,0 +1,37 @@
+.section--home-header {
+    position: relative;
+    overflow: hidden;
+
+    .headerimg {
+        top: 0;
+        left: 0;
+        position: absolute;
+
+        @include media($max-sm) {
+            height: 100vh;
+        }
+
+
+        @include media($max-sm) {
+            height: 100%;
+        }
+
+
+        object-fit: cover;
+
+
+
+        @include media($screen-sm) {
+            min-height: 100%;
+            width: auto;
+        }
+    }
+
+    section {
+        position: relative;
+    }
+
+    @include media($max-sm) {
+        padding: 1em 0 !important;
+    }
+}

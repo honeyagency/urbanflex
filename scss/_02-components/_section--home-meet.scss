@@ -1,0 +1,19 @@
+.section--home-meet {
+    padding-top: 2em;
+
+    @include media($screen-xs) {}
+
+    @include media($screen-sm) {
+        padding-top: 5em;
+    }
+
+
+    @include media($max-xs) {}
+
+
+    @include media($max-sm) {
+        h3 {
+            margin-top: 1em;
+        }
+    }
+}
