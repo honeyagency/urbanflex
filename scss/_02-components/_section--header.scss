@@ -24,6 +24,7 @@
         @include media($screen-sm) {
             min-height: 100%;
             width: auto;
+            min-width: 100%;
         }
     }
 
