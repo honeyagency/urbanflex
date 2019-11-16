@@ -43,6 +43,34 @@ function prepareHomepage()
         'classes' => $classes,
     );
 
+// pricing
+    if (have_rows('field_5dcf402449001')) {
+        $tiers = array();
+        while (have_rows('field_5dcf402449001')) {
+            the_row();
+            if (have_rows('field_5dcf43591c1e2')) {
+                $prices = array();
+                while (have_rows('field_5dcf43591c1e2')) {
+                    the_row();
+
+                    $prices[] = array(
+                        'price' => get_sub_field('field_5dcf43621c1e3'),
+                        'title' => get_sub_field('field_5dcf43691c1e4'),
+                        'link'  => get_sub_field('field_5dcf436c1c1e5'),
+                    );
+                }
+            }
+            $tiers[] = array(
+                'title'  => get_sub_field('field_5dcf434e1c1e1'),
+                'prices' => $prices,
+            );
+        }
+    }
+    $pricing = array(
+        'title' => get_field('field_5dcf400c48fff'),
+        'text'  => get_field('field_5dcf401349000'),
+        'tiers' => $tiers,
+    );
 // Meet
 
     $meetImage   = null;
@@ -63,9 +91,9 @@ function prepareHomepage()
 // Social
 
     $social = array(
-        'facebook' => get_field('field_5b6386c388e5b'),
-        'instagram'  => get_field('field_5b6386cf88e5c'),
-        'youtube'  => get_field('field_5b6386d688e5d'),
+        'facebook'  => get_field('field_5b6386c388e5b'),
+        'instagram' => get_field('field_5b6386cf88e5c'),
+        'youtube'   => get_field('field_5b6386d688e5d'),
     );
 
 // Hours
@@ -100,6 +128,7 @@ function prepareHomepage()
     $home = array(
         'header'  => $header,
         'about'   => $about,
+        'pricing' => $pricing,
         'meet'    => $meet,
         'social'  => $social,
         'hours'   => $hours,

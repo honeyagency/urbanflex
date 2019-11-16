@@ -35,6 +35,6 @@
         "grunt-svgmin": "*",
         "node-sass": "*",
         "postcss-convert-values": "*",
-        "postcss-font-magician": "^2.2.1"
+        "postcss-font-magician": "^2.3.1"
     }
 }

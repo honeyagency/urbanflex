@@ -1,4 +1,4 @@
-<section class="section--home-meet bg--blue color--white flex flex--wrap justify--around align--items-center spacing--gutter">
+<section class="section--home-meet {% if home.pricing.tiers != null %}{% else %}bg--blue color--white{% endif %} flex flex--wrap justify--around align--items-center spacing--gutter">
 <div class="grid--one grid--md-third">
 	<img src="{{home.meet.image|resize(55)}}" data-original="{{home.meet.image|resize(660)}}" width="330" class="block">
 </div>

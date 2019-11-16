@@ -4,6 +4,7 @@
 		{% include 'components/sections/section--home-header.twig' %}
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			{% include 'components/sections/section--home-about.twig' %}
+			{% if home.pricing.tiers != null %}{% include 'components/sections/section--home-pricing.twig' %}{% endif %}
 			{% include 'components/sections/section--home-meet.twig' %}
 		</article>
 {% endblock %}

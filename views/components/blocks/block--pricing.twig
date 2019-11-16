@@ -1,0 +1,7 @@
+<div class="block--pricing grid--one grid--sm-third spacing--vert-4 spacing--horiz-2 bg--white color--black text--center margin--bot-1 margin--dsk-bot-2">
+	<h4 class="h2">{{price.price}}</h4>
+	<div class="piece--price-title">
+		{{price.title}}
+	</div>
+	{% if price.link %}<a href="{{price.link.url}}" target="{{price.link.target}}" title="{{price.link.title}}" class="button">{{price.link.title}}</a>{% endif %}
+</div>

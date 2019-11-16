@@ -1,0 +1,13 @@
+<section class="section--home-pricing bg--blue spacing--gutter spacing--vert-2">
+	
+	{% if home.pricing.title %}<h2>{{home.pricing.title}}</h2>{% endif %}
+	{% for tier in home.pricing.tiers %}
+		<div class="block--tier flex flex--wrap justify--between align--items-stretch max-wrap margin--center margin--vert-">
+			<h3 class="grid--one margin--top-1 margin--bot-1">{{tier.title}}</h3>
+			{% for price in tier.prices %}
+				{% include 'components/blocks/block--pricing.twig' %}
+			{% endfor %}
+		</div>
+	{% endfor %}
+	
+</section>

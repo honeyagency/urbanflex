@@ -1,0 +1,28 @@
+.section--home-pricing {
+    padding-top: 7rem !important;
+
+    div.block--tier {
+        .block--pricing {
+            // margin-right: 2rem;
+       
+        }
+
+        &:nth-of-type(1), &:nth-of-type(4) {}
+
+        &:nth-of-type(2), &:nth-of-type(5) {}
+
+        &:nth-of-type(3), &:nth-of-type(6) {}
+
+        @include media($max-md) {
+            .h2 {
+                font-size: 1.8rem !important;
+            }
+        }
+    }
+
+    .piece--price-title {
+        line-height: 1.3;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+    }
+}
