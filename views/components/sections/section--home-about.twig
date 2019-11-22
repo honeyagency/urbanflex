@@ -1,7 +1,7 @@
-<section class="section--home-about flex flex--wrap justify--around align--items-stretch spacing--gutter spacing--vert-2 max-wrap margin--center">
+<section class="section--home-about flex flex--wrap justify--around align--items-stretch spacing--gutter spacing--vert-3 spacing--dsk-vert-6 max-wrap margin--center">
 	<div class="block--about-text grid--one grid--md-two-thirds grid--lg-half flex flex--wrap justify--between flex--column">
 		{{home.about.content}}
-		<div class="block--about-classes hidden--mob bg--yellow spacing--vert-2 spacing--horiz-3 margin--top-1 grid--two-thirds">
+		<div class="block--about-classes hidden--mob bg--yellow spacing--vert-3 spacing--horiz-3  margin--top-3 grid--two-thirds">
 			<h2 class="color--white">Classes</h2>
 			<div class="spacing--vert-2">
 				{% for class in home.about.classes %}
@@ -9,7 +9,7 @@
 				{% endfor %}
 			</div>
 			{% if home.about.booking %}
-				<a href="{{home.about.booking.url}}" target="{{home.about.booking.target}}" title="{{home.about.booking.title}}" class="button color--white bg--blue">{{home.about.booking.title}}</a>
+				<a href="{{home.about.booking.url}}" target="{{home.about.booking.target}}" title="{{home.about.booking.title}}" class="button color--white bg--blue">{{home.about.booking.title}} {% if home.about.booking.target == '_blank' %}<i class="icon-external" data-grunticon-embed></i>{% endif %}</a>
 			{% endif %}
 		</div>
 	</div>
@@ -17,14 +17,14 @@
 		<img class="" data-original="{{home.about.image|resize(1040)}}" width="520">
 	</div>
 </section>
-<div class="block--about-classes hidden--dsk bg--yellow spacing--vert-2 spacing--gutter grid--one">
-	<h2 class="color--white">Classes</h2>
+<div class="block--about-classes hidden--dsk bg--yellow spacing--vert-3 spacing--gutter grid--one">
+	<h2 class="color--white margin--top-0 margin--bot-1">Classes</h2>
 	<div class="spacing--vert-2">
 		{% for class in home.about.classes %}
 			<h5 class="text--uppercase">{{class.title}}</h5>
 		{% endfor %}
 	</div>
 	{% if home.about.booking %}
-		<a href="{{home.about.booking.url}}" target="{{home.about.booking.target}}" title="{{home.about.booking.title}}" class="button color--white bg--blue">{{home.about.booking.title}}</a>
+		<a href="{{home.about.booking.url}}" target="{{home.about.booking.target}}" title="{{home.about.booking.title}}" class="button color--white bg--blue">{{home.about.booking.title}} {% if home.about.booking.target == '_blank' %}<i class="icon-external" data-grunticon-embed></i>{% endif %}</a>
 	{% endif %}
 </div>

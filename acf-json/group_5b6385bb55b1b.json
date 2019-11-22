@@ -346,9 +346,9 @@
                     "button_label": "Add Pricing",
                     "sub_fields": [
                         {
-                            "key": "field_5dcf43621c1e3",
-                            "label": "Price",
-                            "name": "price",
+                            "key": "field_5dcf43691c1e4",
+                            "label": "Title",
+                            "name": "title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -365,9 +365,9 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5dcf43691c1e4",
-                            "label": "Title",
-                            "name": "title",
+                            "key": "field_5dcf43621c1e3",
+                            "label": "Price",
+                            "name": "price",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -406,7 +406,7 @@
             "key": "field_5dcf401349000",
             "label": "Pricing Note",
             "name": "pricing_text_field",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -416,10 +416,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
         },
         {
             "key": "field_5b6385db88e4e",
@@ -757,5 +757,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573864754
+    "modified": 1574452734
 }

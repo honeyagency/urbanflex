@@ -1,4 +1,4 @@
-$doublegutter: $grid * 3;
+$doublegutter: $grid * 1.5;
 
 // this variable is in variables
 .flex--double {
@@ -294,7 +294,6 @@ $doublegutter: $grid * 3;
     //     }
     // }
 
-
     // @include media($screen-xsm) {
     //     .grid--xsm-one {
     //         flex-basis: 100%;
@@ -442,7 +441,6 @@ $doublegutter: $grid * 3;
     //     }
     // }
 
-
     // @include media($screen-sm) {
     //     .grid--sm-one {
     //         flex-basis: 100%;
@@ -589,7 +587,6 @@ $doublegutter: $grid * 3;
     //         }
     //     }
     // }
-
 
     @include media($screen-smd) {
         .grid--smd-one {

@@ -1,47 +1,23 @@
-
-
-
-
-@font-face{ 
-	font-family: 'Brandon Text';
-	src: local("Brandon Text"),
-		 local(brandon-text),
-		 url('/wp-content/themes/urbanflex/app/fonts/brandon_text.woff2') format('woff2'),
-	     url('/wp-content/themes/urbanflex/app/fonts/brandon_text.woff') format('woff'),
-	     url('/wp-content/themes/urbanflex/app/fonts/brandon_text.eot?#iefix') format('embedded-opentype'),
-	     url('/wp-content/themes/urbanflex/app/fonts/brandon_text.ttf') format('truetype'),
+@font-face {
+    font-family: 'Brandon Text';
+    src: local("Brandon Text"), local(brandon-text), url("/wp-content/themes/urbanflex/app/fonts/brandon_text.woff2") format("woff2"), url("/wp-content/themes/urbanflex/app/fonts/brandon_text.woff") format("woff"), url("/wp-content/themes/urbanflex/app/fonts/brandon_text.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/urbanflex/app/fonts/brandon_text.ttf") format("truetype");
 }
 
-@font-face{ 
-	font-family: 'A Love Of Thunder';
-	src: local("A Love Of Thunder"),
-		 local(A-Love-Of-Thunder),
-		 url('/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.woff2') format('woff2'),
-	     url('/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.woff') format('woff'),
-	     url('/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.eot?#iefix') format('embedded-opentype'),
-	     url('/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.ttf') format('truetype'),
+@font-face {
+    font-family: 'A Love Of Thunder';
+    src: local("A Love Of Thunder"), local(A-Love-Of-Thunder), url("/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.woff2") format("woff2"), url("/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.woff") format("woff"), url("/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/urbanflex/app/fonts/a_love_of_thunder.ttf") format("truetype");
 }
 
-$default-font: 'Brandon Text', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$default-font: "Brandon Text", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
 
-$base-serif-font:$default-font;
-$base-sans-font:$default-font;
+$base-serif-font: $default-font;
+$base-sans-font: $default-font;
 
-$heading-font-family: 'A Love of Thunder';
+$heading-font-family: "A Love of Thunder";
 
 $heading-font-weight: 600;
 
 $link-color: $blue;
-
-$max-width: (
-	xs: 	480px,
-	xsm: 	640px,
-	sm: 	768px,
-	smd: 	834px,
-	md: 	992px,
-	lg: 	1200px,
-	xl: 	1640px
-);
 
 $max-wrap: 1280px;
 
@@ -53,45 +29,47 @@ $base-padding: 1em;
 $base-line-height: 1.6;
 
 $base-border-radius: 8px;
-$gr:1.610833;
+$gr: 1.610833;
 
-$grid:1;
+$grid: 1;
 
-//
-// Media Queries & Breakpoints
-// 
+$max-width: (xs: 480px, xsm: 640px, sm: 768px, smd: 834px, md: 992px, mdl: 1110px, lg: 1200px, xl: 1640px);
 
 // Extra small screen / phone
-$screen-xs:                  map-get($max-width, xs) !default;
+$screen-xs: map-get($max-width, xs) !default;
 
-$screen-xsm:                 map-get($max-width, xsm) !default;
-
-// Small screen / tablet
-$screen-sm:                  map-get($max-width, sm) !default;
+$screen-xsm: map-get($max-width, xsm) !default;
 
 // Small screen / tablet
-$screen-smd:                 map-get($max-width, smd) !default;
+$screen-sm: map-get($max-width, sm) !default;
+
+// Small screen / tablet
+$screen-smd: map-get($max-width, smd) !default;
 
 // Medium screen / desktop
-$screen-md:                  map-get($max-width, md) !default;
+$screen-md: map-get($max-width, md) !default;
+
+$screen-mdl: map-get($max-width, mdl) !default;
 
 // Large screen / wide desktop
-$screen-lg:                  map-get($max-width, lg) !default;
+$screen-lg: map-get($max-width, lg) !default;
 
 // Monster Screen
-$screen-xl:                  map-get($max-width, xl) !default;
+$screen-xl: map-get($max-width, xl) !default;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-xs - 1) !default;
-$screen-xsm-max:             ($screen-xsm - 1) !default;
-$screen-sm-max:              ($screen-sm - 1) !default;
-$screen-smd-max:             ($screen-smd - 1) !default;
-$screen-md-max:              ($screen-md - 1) !default;
-$screen-lg-max:              ($screen-lg - 1) !default;
+$screen-xs-max: $screen-xs - 1 !default;
+$screen-xsm-max: $screen-xsm - 1 !default;
+$screen-sm-max: $screen-sm - 1 !default;
+$screen-smd-max: $screen-smd - 1 !default;
+$screen-md-max: $screen-md - 1 !default;
+$screen-mdl-max: $screen-mdl - 1 !default;
+$screen-lg-max: $screen-lg - 1 !default;
 
-$max-xs:  	new-breakpoint(max-width $screen-xs-max 12);
-$max-xsm: 	new-breakpoint(max-width $screen-xsm-max 12);
-$max-sm: 	new-breakpoint(max-width $screen-sm-max 12);
-$max-smd: 	new-breakpoint(max-width $screen-smd-max 12);
-$max-md:  	new-breakpoint(max-width $screen-md-max  6);
-$max-lg:  	new-breakpoint(max-width $screen-lg-max  6);
+$max-xs: new-breakpoint(max-width $screen-xs-max 12);
+$max-xsm: new-breakpoint(max-width $screen-xsm-max 12);
+$max-sm: new-breakpoint(max-width $screen-sm-max 12);
+$max-smd: new-breakpoint(max-width $screen-smd-max 12);
+$max-md: new-breakpoint(max-width $screen-md-max 6);
+$max-mdl: new-breakpoint(max-width $screen-mdl-max 6);
+$max-lg: new-breakpoint(max-width $screen-lg-max 6);
